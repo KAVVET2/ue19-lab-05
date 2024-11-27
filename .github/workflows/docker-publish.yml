@@ -29,9 +29,9 @@ jobs:
       # Étape 3: Construire l'image Docker
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} .
+          docker build -t ghcr.io/kavvet2/ue19-lab-05:${{ github.sha }} .
 
       # Étape 4: Publier l'image Docker sur GitHub Packages (GHCR)
       - name: Push Docker image to GitHub Packages
         run: |
-          docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
+          docker push ghcr.io/kavvet2/ue19-lab-05:${{ github.sha }}
