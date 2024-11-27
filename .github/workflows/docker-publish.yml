@@ -33,7 +33,7 @@ jobs:
 
       # Étape 4: Vulerability Scan avec trivy sur l'image Docker
       - name: Scan Docker image for vulnerabilities with Trivy
-        uses: aquasecurity/trivy-action@v0.3.0
+        uses: aquasecurity/trivy-action@0.29.0
         with:
           image: ghcr.io/kavvet2/ue19-lab-05:${{ github.sha}}
       # Étape 5: Publier l'image Docker sur GitHub Packages (GHCR) if no vulnerabilities
